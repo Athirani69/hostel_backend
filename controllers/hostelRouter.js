@@ -12,6 +12,12 @@ router.post("/hstl",async(req,res)=>{
     })
     
 })
-    
+
+router.get("/viewall",async(req,res)=>{
+    let data=await hstlMdl.find()
+    res.json(data)
+})
+
+
 
 module.exports=router;
