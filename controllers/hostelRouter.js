@@ -1,7 +1,7 @@
 const express=require("express")
 
 const router=express.Router()
-const hstlMdl=require("../models/hstlModel")
+const hstlMdl=require("../model/hstlModel")
 
 router.post("/hstl",async(req,res)=>{
     let data=req.body
