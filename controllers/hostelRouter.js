@@ -1,7 +1,7 @@
 const express=require("express")
 
 const router=express.Router()
-const hstlMdl=require("../models/hstlModel")
+const hstlMdl=require("../model/hstlModel")
 
 router.post("/hstl",async(req,res)=>{
     let data=req.body
@@ -18,6 +18,11 @@ router.get("/viewall",async(req,res)=>{
     res.json(data)
 })
 
+router.post("/patsearch",async(req,res)=>{
+    let input=req.body
+    let data=await hstlMdl.find(input)
+    res.json(data)
+})
 
 
 module.exports=router;
